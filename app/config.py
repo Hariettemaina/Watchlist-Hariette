@@ -26,3 +26,9 @@ class DevConfig(Config):
     '''
     
     DEBUG = True
+    
+    
+#     from .models.reviews import Review
+# from .forms import ReviewForm
+
+# from wtforms.validators import InputRequired

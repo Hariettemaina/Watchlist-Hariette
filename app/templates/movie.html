@@ -1,5 +1,12 @@
 {% extends 'base.html'%}
 
+<!-- Styles block -->
+
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/movie.css')}}">
+{% endblock %}
+
 <!-- content block -->
 {% block content%}
 
@@ -14,14 +21,13 @@
 
             <p class="overview"> {{ movie.overview }}</p>
             <p class="ratings"> <b> {{ movie.vote_average }}</b> - <i>{{ movie.vote_count}} votes </i> </p>
-
+        </div>
     </div>
 </div>
+{% endblock%}
 
 <!-- {% if title %}
         <title> {{ title }}</title>
         {% else %}
         <title> Welcome to the best Movie Review website </title>
         {% endif %} -->
-
-{% endblock%}
